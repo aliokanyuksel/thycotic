@@ -1,0 +1,27 @@
+[Version]
+Signature="$Windows NT$
+ 
+[NewRequest]
+Subject = "CN=secretserver1"
+
+Requesttype = Cert
+KeyLength = 2048
+FriendlyName = "SS1"
+Exportable = true
+HashAlgorithm = sha256
+MachineKeySet = true
+KeySpec = 1
+
+[Extensions]
+; If your client operating system is Windows Server 2003, Windows Server 2003 R2, or Windows XP
+; and you are using a standalone CA, SANs can be included in the RequestAttributes 
+; section by using the following text format.
+2.5.29.17 = "{text}"
+_continue_ = "dns=secretserver1&"
+_continue_ = "dn=CN=secretserver1,OU=Web Servers,DC=egearge,DC=com&"
+_continue_ = "url=http://www.egearge.com&"
+_continue_ = "ipaddress=192.168.1.10&"
+_continue_ = "email=aliokan.yuksel@egearge.com&"
+_continue_ = "upn=alokan.yuksel@egearge.com&"
+_continue_ = "guid=f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39&"
+
